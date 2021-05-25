@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.sbs.starter.dao.ArticleDao;
 import com.sbs.starter.dto.Article;
+import com.sbs.starter.util.CUtil;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,11 +28,12 @@ public class ArticleServiceImpl implements ArticleService {
 		// TODO Auto-generated method stub
 		articleDao.add(param);
 		
-		BigInteger bigIntId = (BigInteger)param.get("id");
-		long newId = bigIntId.longValue();
+		// TODO : CUtile을 사용하기 전의 코드 (너무 길다)
+//		BigInteger bigIntId = (BigInteger)param.get("id");
+//		long newId = bigIntId.longValue();
+//		
+//		log.info("newId : "  + newId);
 		
-		log.info("newId : "  + newId);
-		
-		return newId;
+		return CUtil.getAsLong(param.get("id"));
 	}
 }
