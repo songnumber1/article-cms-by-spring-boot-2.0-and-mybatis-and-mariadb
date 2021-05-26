@@ -55,4 +55,12 @@ public class ArticleServiceImpl implements ArticleService {
 		
 		articleDao.delete(id);
 	}
+
+	@Override
+	public void modify(Map<String, Object> param) {
+		// TODO Auto-generated method stub
+		
+		articleDao.modify(param);
+		 
+	}
 }
