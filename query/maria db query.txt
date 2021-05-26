@@ -1,0 +1,27 @@
+
+USE starter;
+
+CREATE TABLE article (
+	id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	PRIMARY KEY(id),
+	regDate DATETIME NOT NULL,
+	title CHAR(100) NOT NULL,
+	`body` TEXT NOT NULL,
+	hit INT NOT NULL DEFAULT 0
+);
+
+
+INSERT INTO article
+SET regDate = NOW(),
+title = '제목4',
+BODY = '내용4';
+
+INSERT INTO article
+SET regDate = NOW(),
+title = '제목5',
+BODY = '내용5';
+
+INSERT INTO article
+SET regDate = NOW(),
+title = '제목6',
+BODY = '내용6';
