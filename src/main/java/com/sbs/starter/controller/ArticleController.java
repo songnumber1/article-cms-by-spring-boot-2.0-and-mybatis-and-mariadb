@@ -35,10 +35,12 @@ public class ArticleController {
 	@RequestMapping("/article/list")
 	public String showMain(Model aModel) {
 		List<Article> list = articleService.getList();
+		int totalCount = articleService.getTotalCount();
 		
 		aModel.addAttribute("list", list);
 		// 위의 showMain() 함수와 같이 
 		// request.setAttribute("list", list);와 똑같은 표현이다.
+		aModel.addAttribute("totalCount", totalCount);
 		
 		return "article/list";
 	}

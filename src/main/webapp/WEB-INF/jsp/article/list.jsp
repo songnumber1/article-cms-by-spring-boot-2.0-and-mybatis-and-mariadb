@@ -18,6 +18,8 @@ List<Article> list = (List<Article>)request.getAttribute("list");
 <body>
 	<h1>게시물 리스트</h1>
 	
+	<h2>전체 게시물 개수 : ${totalCount}</h2>
+	
 	<!-- el 문법 
 	<div>
 		${list}
@@ -40,7 +42,7 @@ List<Article> list = (List<Article>)request.getAttribute("list");
 	<% } %>
 	-->
 	
-	<h2>V2</h2>
+	<!-- V2 방식 -->
 	<c:forEach items="${list}" var="article">
 			<section> 번호 : ${article.id}, 제목 : ${article.title} </section>
 	</c:forEach>

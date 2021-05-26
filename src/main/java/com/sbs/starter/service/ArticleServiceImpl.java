@@ -36,4 +36,10 @@ public class ArticleServiceImpl implements ArticleService {
 		
 		return CUtil.getAsLong(param.get("id"));
 	}
+
+	@Override
+	public int getTotalCount() {
+		// TODO Auto-generated method stub
+		return articleDao.getTotalCount();
+	}
 }
