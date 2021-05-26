@@ -63,4 +63,12 @@ public class ArticleServiceImpl implements ArticleService {
 		articleDao.modify(param);
 		 
 	}
+
+	@Override
+	public void hitUp(long id) {
+		// TODO Auto-generated method stub
+		
+		articleDao.hitUp(id);
+		
+	}
 }

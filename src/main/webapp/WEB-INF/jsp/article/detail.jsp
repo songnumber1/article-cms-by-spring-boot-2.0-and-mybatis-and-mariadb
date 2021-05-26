@@ -9,6 +9,7 @@
 		번호 : ${ article.id } <br> 
 		제목 : ${ article.title } <br>
 		내용 : ${ article.body } <br>
+		조회수 : ${ article.hit } <br>
 	</section>
 	
 	<div class="btns con">	
