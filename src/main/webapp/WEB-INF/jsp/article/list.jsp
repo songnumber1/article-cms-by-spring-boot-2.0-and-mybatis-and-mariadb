@@ -47,5 +47,6 @@ List<Article> list = (List<Article>)request.getAttribute("list");
 			<section> 번호 : ${article.id}, 제목 : ${article.title} </section>
 	</c:forEach>
 	
+	<a href="./add">게시물 추가</a>
 </body>
 </html>
