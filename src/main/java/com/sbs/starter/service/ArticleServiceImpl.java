@@ -42,4 +42,10 @@ public class ArticleServiceImpl implements ArticleService {
 		// TODO Auto-generated method stub
 		return articleDao.getTotalCount();
 	}
+
+	@Override
+	public Article getOne(long id) {
+		// TODO Auto-generated method stub
+		return articleDao.getOne(id);
+	}
 }

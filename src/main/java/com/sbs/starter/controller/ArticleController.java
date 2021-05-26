@@ -32,15 +32,24 @@ public class ArticleController {
 //		return "article/list";
 //	}
 	
+	@RequestMapping("/article/detail")
+	public String showDetail(Model model, long id) { 
+		Article article = articleService.getOne(id);
+		
+		model.addAttribute("article", article);
+		
+		return "article/detail";
+	}
+	
 	@RequestMapping("/article/list")
-	public String showMain(Model aModel) {
+	public String showMain(Model model) {
 		List<Article> list = articleService.getList();
 		int totalCount = articleService.getTotalCount();
 		
-		aModel.addAttribute("list", list);
+		model.addAttribute("list", list);
 		// 위의 showMain() 함수와 같이 
 		// request.setAttribute("list", list);와 똑같은 표현이다.
-		aModel.addAttribute("totalCount", totalCount);
+		model.addAttribute("totalCount", totalCount);
 		
 		return "article/list";
 	}

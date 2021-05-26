@@ -13,5 +13,7 @@ public interface ArticleDao {
 
 	public long add(Map<String, Object> param);
 
-	public int getTotalCount();	
+	public int getTotalCount();
+
+	public Article getOne(long id);	
 }
