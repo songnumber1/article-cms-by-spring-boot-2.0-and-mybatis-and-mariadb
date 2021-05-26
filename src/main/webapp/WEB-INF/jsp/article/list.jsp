@@ -14,11 +14,13 @@ List<Article> list = (List<Article>)request.getAttribute("list");
 <head>
 <meta charset="UTF-8">
 <title>커뮤니티 사이트 - 게시물 리스트</title>
+<link rel="stylesheet" href="/resource/common.css">
+
 </head>
 <body>
-	<h1>게시물 리스트</h1>
+	<h1 class="con">게시물 리스트</h1>
 	
-	<h2>전체 게시물 개수 : ${totalCount}</h2>
+	<h2 class="con">전체 게시물 개수 : ${totalCount}</h2>
 	
 	<!-- el 문법 
 	<div>
@@ -43,10 +45,15 @@ List<Article> list = (List<Article>)request.getAttribute("list");
 	-->
 	
 	<!-- V2 방식 -->
-	<c:forEach items="${list}" var="article">
-			<section> 번호 : ${article.id}, 제목 : ${article.title} </section>
-	</c:forEach>
+	<div class="con">
+		<c:forEach items="${list}" var="article">
+				<section> 번호 : ${article.id}, 제목 : ${article.title} </section>
+				<hr>
+		</c:forEach>
+	</div>
 	
-	<a href="./add">게시물 추가</a>
+	<div class="bnts con">
+		<a href="./add">게시물 추가</a>
+	</div>
 </body>
 </html>
