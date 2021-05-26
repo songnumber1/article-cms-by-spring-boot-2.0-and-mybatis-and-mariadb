@@ -41,6 +41,15 @@ public class ArticleController {
 		return "article/detail";
 	}
 	
+	@RequestMapping("/article/modify")
+	public String doModify(Model model, long id) {
+		Article article = articleService.getOne(id);
+		
+		model.addAttribute("article", article);
+		
+		return "article/modify";
+	}
+	
 	@RequestMapping("/article/list")
 	public String showMain(Model model) {
 		List<Article> list = articleService.getList();
