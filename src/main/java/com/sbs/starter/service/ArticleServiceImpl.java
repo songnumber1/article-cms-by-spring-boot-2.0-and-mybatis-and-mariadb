@@ -48,4 +48,11 @@ public class ArticleServiceImpl implements ArticleService {
 		// TODO Auto-generated method stub
 		return articleDao.getOne(id);
 	}
+
+	@Override
+	public void delete(long id) {
+		// TODO Auto-generated method stub
+		
+		articleDao.delete(id);
+	}
 }

@@ -14,6 +14,10 @@
 		SELECT COUNT(*) FROM article
 	</select>
 	
+	<delete id="delete" parameterType="long">
+		DELETE FROM article WHERE id= #{id}
+	</delete>
+	
 	<insert id="add" parameterType="map" useGeneratedKeys="true"
 		keyProperty="id">
 		INSERT INTO article
