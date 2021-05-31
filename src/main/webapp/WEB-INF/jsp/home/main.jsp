@@ -5,7 +5,6 @@
 <c:set var="pageName" value="메인"/>
 <%@ include file="../part/head.jspf" %>
 
-
 <c:if test="${ loginedMember != null }">
 	
 	<div class="con">
